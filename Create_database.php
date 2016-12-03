@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-EBook store creat table script
+EBook Store Database creation script
 Created 11/2016
 Author Adam Wharmby
 -->
@@ -24,25 +24,16 @@ Author Adam Wharmby
             die("Connection failed: " . mysqli_connect_error());
         }
         echo "Connected successfully";
-        //create table
-        $sql = "CREATE TABLE EBook (
-                ISBN INT (20),
-                Title VARCHAR (100),
-                Genre VARCHAR (20),
-                Cost DECIMAL (10.0),
-                Publisher VARCHAR (100),
-                YearofPublication DATE,
-                DownloadSize INT (11),
-                AgeRating INT (11))";
-           
-        if (mysqli_query($conn, $sql)){
-            echo "Table EBook created successfully";
-        } else {
-            echo "Error creating Table EBook:" . mysqli_error($conn);
+        
+        // create database
+        $sql = "CREATE DATABASE adamw3507";
+        if (mysqli_query($conn, $sql)) {
+            echo "Database created successfully";
+            
+        }else {
+            echo "Error creating database: " . mysqli_error($conn);
         }
         
-        mysqli_close($conn);
-                
         ?>
         
     </body>
