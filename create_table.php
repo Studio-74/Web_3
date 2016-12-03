@@ -29,7 +29,7 @@ Author Adam Wharmby
                 ISBN INT (20),
                 Title VARCHAR (100),
                 Genre VARCHAR (20),
-                Cost DECIMAL (10.0),
+                Cost DECIMAL (10.2),
                 Publisher VARCHAR (100),
                 YearofPublication DATE,
                 DownloadSize INT (11),
